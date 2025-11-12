@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Password Encryptor</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h2>🔐 Password Encryptor With AES-GCM </h2>
+
+    <label for="plain">Enter Your Password to encrypt</label>
+    <input type="password" id="plain" placeholder="Type Password..."/>
+
+    <button id="encryptBtn">Encrypt</button>
+
+    <div class="result-block">
+      <div class="result-header">
+        <b>Encrypted Password</b>
+        <button class="copy-btn" data-copy="cipherOut">Copy</button>
+      </div>
+      <textarea id="cipherOut" readonly rows="3"></textarea>
+    </div>
+
+    <hr/>
+
+    <h3>🔓 Decrypt</h3>
+    <label for="cipherIn">Paste encrypted Password </label>
+    <textarea id="cipherIn" rows="3" placeholder="Paste here..."></textarea>
+
+    <button id="decryptBtn">Decrypt</button>
+
+    <div class="result-block">
+      <div class="result-header">
+        <b>Recovered Password</b>
+        <button class="copy-btn" data-copy="plainOut">Copy</button>
+      </div>
+      <textarea id="plainOut" readonly rows="2"></textarea>
+      <p id="status" class="status"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>Developed by <b>Omar Rashied</b></p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
+<!--Omar Rashied-->
